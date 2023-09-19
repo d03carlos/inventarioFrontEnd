@@ -1,12 +1,29 @@
 <div class="container mt-4">
-  <div class="card">
-    <div class="card-header"></div>
-    <div class="card-body">
-      <form action="" class="form">
-        <label for="">Nombre</label>
-        <input type="text">
-      </form>
+  <div class="col-sm-6">
+    <div class="card" >
+      <div class="card-header">
+        <h4>Agregar producto</h4>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" >
+          <div>
+            <label for="" class="form-group">Nombre</label>
+            <input type="text" class="form-control" required="true" [(ngModel)]="producto.name" id="name" name="name">
+          </div>
+          <div>
+            <label for="" class="form-group">Precio</label>
+            <input type="number" step="any" class="form-control" [(ngModel)]="producto.price" id="price" name="price">
+          </div>
+          <div>
+            <label for="" class="form-group">Cantidad</label>
+            <input type="number"  class="form-control" [(ngModel)]="producto.stock" id="stock" name="stock">
+          </div>
+          <div >
+            <button class="btn btn-success mt-3" type="submit ">Guardar</button>
+          </div>
+        </form>
+      </div>
+
     </div>
-    <div class="card-footer"></div>
   </div>
 </div>

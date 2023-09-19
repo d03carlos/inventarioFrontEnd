@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListarProductoComponent } from './listar-producto/listar-producto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { AgregarProductoComponent } from './agregar-producto/agregar-producto.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
