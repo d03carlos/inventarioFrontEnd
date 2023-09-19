@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <div class="col-sm-6">
+    <div class="card" >
+      <div class="card-header">
+        <h4>Editar producto</h4>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" >
+          <div>
+            <label for="" class="form-group">Id</label>
+            <input type="text" class="form-control" required="true" [(ngModel)]="producto.productId" id="productId" name="productId" readonly>
+          </div>
+          <div>
+            <label for="" class="form-group">Nombre</label>
+            <input type="text" class="form-control" required="true" [(ngModel)]="producto.name" id="name" name="name">
+          </div>
+          <div>
+            <label for="" class="form-group">Precio</label>
+            <input type="number" step="any" class="form-control" [(ngModel)]="producto.price" id="price" name="price">
+          </div>
+          <div>
+            <label for="" class="form-group">Cantidad</label>
+            <input type="number"  class="form-control" [(ngModel)]="producto.stock" id="stock" name="stock">
+          </div>
+          <div >
+            <button class="btn btn-success mt-3" type="submit ">Guardar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
